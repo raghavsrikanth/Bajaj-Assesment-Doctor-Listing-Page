@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+}
+
+.app {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+/* ... (existing styles) */
+
+.filter-panel {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease;
+}
+
+.filter-panel:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.filter-panel h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5rem;
+  color: #343a40;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+}
+
+.filter-panel h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #495057;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.filter-panel label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #495057;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.filter-panel label:hover {
+  color: #007bff;
+}
+
+.filter-panel input[type="radio"],
+.filter-panel input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
+
+.filter-panel input[type="radio"]:hover,
+.filter-panel input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+
+.doctor-list {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.doctor-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.doctor-photo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.doctor-card h4 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #007bff;
+}
+
+.doctor-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .filter-panel {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .doctor-list {
+    width: 100%;
+  }
+}
