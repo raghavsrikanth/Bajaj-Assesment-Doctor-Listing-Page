@@ -5,6 +5,10 @@ function DoctorList({ doctors }) {
     return <p>No doctors found.</p>;
   }
 
+  const handleBookAppointment = (doctorName) => {
+    alert(`Appointment booked with Dr. ${doctorName}`);
+  };
+
   return (
     <div className="doctor-list">
       {doctors.map(doctor => (
@@ -19,6 +23,12 @@ function DoctorList({ doctors }) {
           <p>{doctor.specialities.map(s => s.name).join(', ')}</p>
           <p>{doctor.fees}</p>
           <p>{doctor.experience}</p>
+          <button
+            onClick={() => handleBookAppointment(doctor.name)}
+            className="book-appointment-btn"
+          >
+            Book Appointment
+          </button>
         </div>
       ))}
     </div>

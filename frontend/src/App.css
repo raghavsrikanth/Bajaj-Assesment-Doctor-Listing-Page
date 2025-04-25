@@ -73,7 +73,17 @@ body {
 .filter-panel input[type="checkbox"]:hover {
   transform: scale(1.1);
 }
-
+.book-appointment-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.book-appointment-btn:hover {
+  background-color: #45a049;
+}
 .doctor-list {
   flex: 3;
   display: grid;
